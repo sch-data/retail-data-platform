@@ -218,3 +218,5 @@ __marimo__/
 .streamlit/secrets.toml
 
 .DS_Store
+
+data/raw/online_retail/online_retail_II.xlsx
