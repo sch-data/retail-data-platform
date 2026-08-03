@@ -2,11 +2,11 @@
 
 ## Project Overview
 
-This project explores the 2009–2010 portion of the UCI Online Retail II dataset using Python. It currently includes data quality assessment, data cleaning, exploratory data analysis and data visualisation. Future versions will extend the project with SQL, dashboards, machine learning and data engineering features.
+This project explores the UCI Online Retail II dataset using Python. It currently includes data quality assessment, data cleaning, exploratory data analysis and data visualisation. Future versions will extend the project with SQL, dashboards, machine learning and data engineering features.
 
 ## Dataset
 
-The project uses the 2009–2010 transaction data from the UCI Online Retail II dataset. The original dataset spans two years (2009–2011). The second year of data (2010–2011) will be used for later stages of the project to demonstrate automated data ingestion and pipeline processing.
+The current version of the project uses the 2009–2010 transaction data from the UCI Online Retail II dataset. The original dataset spans two years (2009–2011). The second year of data (2010–2011) will be used for later stages of the project to demonstrate automated data ingestion and pipeline processing.
 
 Download the dataset from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/502/online+retail+ii) and place `online_retail_II.xlsx` in:
 
@@ -36,16 +36,24 @@ Additional SQL scripts, dashboards and pipeline components will be added as the 
 
 ## Installation
 
+1. Clone the Repository
+
 ```bash
 git clone https://github.com/sch-data/retail-data-platform.git
 cd retail-data-platform
+```
+2. Create a Virtual Environment
 
+```
 python -m venv .venv
-source .venv/bin/activate
+source .venv/bin/activate #Linux/MacOS
+```
+3. Install Dependencies
 
+```
 pip install -r requirements.txt
 ```
-Open `notebooks/01_data_exploration.ipynb` in Jupyter or VS Code.
+4. Open `notebooks/01_data_exploration.ipynb` in Jupyter or VS Code.
 
 ## Current Progress
 
