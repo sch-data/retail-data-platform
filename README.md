@@ -26,6 +26,8 @@ retail-data-platform/
 ├── notebooks/
 │   └── 01_data_exploration.ipynb
 ├── sql/
+│   ├── schema.sql
+│   └── analysis_queries.sql
 ├── scripts/
 ├── .gitignore
 ├── README.md
@@ -61,6 +63,7 @@ pip install -r requirements.txt
 - Data cleaning and preprocessing
 - Exploratory data analysis
 - Data visualisation
+- Initial PostgreSQL schema design
 
 ## Example visualisations
 
