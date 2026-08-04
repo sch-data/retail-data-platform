@@ -4,6 +4,20 @@
 
 This project explores the UCI Online Retail II dataset using Python. It currently includes data quality assessment, data cleaning, exploratory data analysis and data visualisation. Future versions will extend the project with SQL, dashboards, machine learning and data engineering features.
 
+## Roadmap
+
+This project is being developed in stages to demonstrate data analysis, data engineering and machine learning skills using a single real-world dataset.
+
+| Version | Status | Focus |
+|---------|--------|-------|
+| V1 | ✅ Complete | Data cleaning, exploratory data analysis and visualisation |
+| V2 | 🚧 In Progress | Reusable Python data processing pipeline |
+| V3 | ⏳ Planned | PostgreSQL database and SQL analysis |
+| V4 | ⏳ Planned | Interactive dashboard |
+| V5 | ⏳ Planned | Machine learning and customer analytics |
+| V6 | ⏳ Planned | Automated ETL pipeline |
+| V7 | ⏳ Planned | Cloud deployment |
+
 ## Dataset
 
 The current version of the project uses the 2009–2010 transaction data from the UCI Online Retail II dataset. The original dataset spans two years (2009–2011). The second year of data (2010–2011) will be used for later stages of the project to demonstrate automated data ingestion and pipeline processing.
@@ -29,6 +43,7 @@ retail-data-platform/
 │   ├── schema.sql
 │   └── analysis_queries.sql
 ├── scripts/
+│   └── clean_data.py
 ├── .gitignore
 ├── README.md
 └── requirements.txt
@@ -57,14 +72,6 @@ pip install -r requirements.txt
 ```
 4. Open `notebooks/01_data_exploration.ipynb` in Jupyter or VS Code.
 
-## Current Progress
-
-- Data quality assessment
-- Data cleaning and preprocessing
-- Exploratory data analysis
-- Data visualisation
-- Initial PostgreSQL schema design
-
 ## Example visualisations
 
 ### Monthly Revenue Trend
@@ -82,16 +89,6 @@ pip install -r requirements.txt
 - Revenue increased substantially between September and November 2010, indicating strong seasonal demand ahead of the holiday period.
 - The United Kingdom generated the vast majority of total revenue, with the Republic of Ireland and the Netherlands as the largest international markets.
 - Most orders were of relatively low value, with only a small number of exceptionally large orders.
-
-## Roadmap
-
-Future development of the project will include:
-
-- Build a relational database and analyse the cleaned dataset using SQL to answer business questions.
-- Develop an interactive dashboard to communicate key sales metrics.
-- Build an automated data processing pipeline.
-- Extend the project with predictive modelling.
-- Deploy the data pipeline using a cloud platform.
 
 ## Licence & Attribution
 
