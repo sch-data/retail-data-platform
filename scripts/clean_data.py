@@ -49,7 +49,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-df = pd.read_csv("data/processed/online_retail_clean.csv")
-df.head()

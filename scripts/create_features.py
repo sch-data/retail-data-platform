@@ -1,7 +1,6 @@
 import pandas as pd
 from pathlib import Path
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 INPUT_FILE = BASE_DIR / "data" / "processed" / "online_retail_clean.csv"
