@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project explores the UCI Online Retail II dataset using Python. It currently includes data quality assessment, data cleaning, exploratory data analysis and data visualisation. Future versions will extend the project with SQL, dashboards, machine learning and data engineering features.
+This project explores the UCI Online Retail II dataset using Python. It currently includes data quality assessment, reusable data cleaning and feature engineering scripts, exploratory data analysis and data visualisation. Future versions will extend the project with SQL, dashboards, machine learning and data engineering features.
 
 ## Roadmap
 
@@ -11,8 +11,8 @@ This project is being developed in stages to demonstrate data analysis, data eng
 | Version | Status | Focus |
 |---------|--------|-------|
 | V1 | ✅ Complete | Data cleaning, exploratory data analysis and visualisation |
-| V2 | 🚧 In Progress | Reusable Python data processing pipeline |
-| V3 | ⏳ Planned | PostgreSQL database and SQL analysis |
+| V2 | ✅ Complete | Reusable Python data processing pipeline |
+| V3 | 🚧 In Progress | PostgreSQL database and SQL analysis |
 | V4 | ⏳ Planned | Interactive dashboard |
 | V5 | ⏳ Planned | Machine learning and customer analytics |
 | V6 | ⏳ Planned | Automated ETL pipeline |
@@ -38,12 +38,14 @@ retail-data-platform/
 │   │   └── online_retail/
 │   └── processed/
 ├── notebooks/
-│   └── 01_data_exploration.ipynb
-├── sql/
-│   ├── schema.sql
-│   └── analysis_queries.sql
+│   ├── 01_data_exploration.ipynb
+│   └── 02_sales_analysis.ipynb
 ├── scripts/
-│   └── clean_data.py
+│   ├── clean_data.py
+│   └── create_features.py
+├── sql/
+│   ├── analysis_queries.sql
+│   └── schema.sql
 ├── .gitignore
 ├── README.md
 └── requirements.txt
@@ -70,7 +72,14 @@ source .venv/bin/activate #Linux/MacOS
 ```
 pip install -r requirements.txt
 ```
-4. Open `notebooks/01_data_exploration.ipynb` in Jupyter or VS Code.
+4. Run the data processing scripts:
+
+```bash
+python scripts/clean_data.py
+python scripts/create_features.py
+```
+
+5. Open the notebooks in Jupyter or VS Code.
 
 ## Example visualisations
 
