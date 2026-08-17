@@ -42,7 +42,8 @@ retail-data-platform/
 │   └── 02_sales_analysis.ipynb
 ├── scripts/
 │   ├── clean_data.py
-│   └── create_features.py
+│   ├── create_features.py
+│   └── load_to_postgres.py
 ├── sql/
 │   ├── analysis_queries.sql
 │   └── schema.sql
