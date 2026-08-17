@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project explores the UCI Online Retail II dataset using Python. It currently includes data quality assessment, reusable data cleaning and feature engineering scripts, exploratory data analysis and data visualisation. Future versions will extend the project with SQL, dashboards, machine learning and data engineering features.
+This project explores the UCI Online Retail II dataset using Python. It currently includes data quality assessment, reusable data cleaning and feature engineering scripts, exploratory data analysis, data visualisation, a PostgreSQL relational database and SQL analysis. Future versions will extend the project with dashboards, machine learning and data engineering features.
 
 ## Roadmap
 
@@ -12,8 +12,8 @@ This project is being developed in stages to demonstrate data analysis, data eng
 |---------|--------|-------|
 | V1 | ✅ Complete | Data cleaning, exploratory data analysis and visualisation |
 | V2 | ✅ Complete | Reusable Python data processing pipeline |
-| V3 | 🚧 In Progress | PostgreSQL database and SQL analysis |
-| V4 | ⏳ Planned | Interactive dashboard |
+| V3 | ✅ Complete | PostgreSQL database and SQL analysis |
+| V4 | 🚧 In Progress | Interactive dashboard |
 | V5 | ⏳ Planned | Machine learning and customer analytics |
 | V6 | ⏳ Planned | Automated ETL pipeline |
 | V7 | ⏳ Planned | Cloud deployment |
@@ -52,8 +52,6 @@ retail-data-platform/
 └── requirements.txt
 ```
 
-Additional SQL scripts, dashboards and pipeline components will be added as the project develops.
-
 ## Installation
 
 1. Clone the Repository
@@ -64,13 +62,13 @@ cd retail-data-platform
 ```
 2. Create a Virtual Environment
 
-```
+```bash
 python -m venv .venv
 source .venv/bin/activate #Linux/MacOS
 ```
 3. Install Dependencies
 
-```
+```bash
 pip install -r requirements.txt
 ```
 4. Run the data processing scripts:
@@ -80,7 +78,41 @@ python scripts/clean_data.py
 python scripts/create_features.py
 ```
 
-5. Open the notebooks in Jupyter or VS Code.
+5. Create and populate the PostgreSQL database
+
+```bash
+createdb retail_data
+psql retail_data < sql/schema.sql
+python scripts/load_to_postgres.py
+```
+
+6. Run the SQL analysis
+
+```bash
+psql retail_data -f sql/analysis_queries.sql
+```
+
+## PostgreSQL Database
+
+The cleaned transaction data is loaded into a relational PostgreSQL database with three tables:
+
+- `products` — product information
+- `invoices` — invoice-level information
+- `invoice_items` — individual transaction lines linking invoices and products
+
+```text
+Raw Excel data
+      ↓
+Python cleaning
+      ↓
+Cleaned CSV
+      ↓
+PostgreSQL database
+      ↓
+SQL analysis
+```
+
+SQL queries analyse overall and monthly sales, product and country performance, top customers, and month-over-month revenue change.
 
 ## Example visualisations
 

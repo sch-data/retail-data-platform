@@ -220,3 +220,5 @@ __marimo__/
 .DS_Store
 
 data/raw/online_retail/online_retail_II.xlsx
+
+data/processed/*.csv
